@@ -3,12 +3,12 @@
 #Description :
 Approfondir les compétences acquises dans les modules Big Data, Intelligence Artificielle, Développement Web et Base de Données à travers une application complète de traitements et de visualisation de données concernant les accidents corporels de la circulation routière en France.
 
-#To do list :
-###Créer des histogrammes
+# To do list :
+### Créer des histogrammes
   - [ ] Construire des séries chronologiques sur l’évolution du nombre d’accidents par mois et semaines sur l’ensemble de la période
   - [ ] Construire un jeu de données avec le nombre d’accidents selon la gravité pour 100.000 habitants par région (qui servirait à l’Analyse en Composantes Principales (ACP) discutée dans la section 3 de l’analyse de données)
   
- ###Créer des histogrammes 
+ ### Créer des histogrammes 
   - [ ] Créer des représentations graphiques
     - [ ] Nombre d’accidents en fonction des conditions atmosphériques
     - [ ] Nombre d’accidents en fonction de la description de la surface
@@ -24,7 +24,7 @@ Approfondir les compétences acquises dans les modules Big Data, Intelligence Ar
   - [ ] Même chose avec les taux d’accidents graves
   - [ ] Exporter et sauvegarder vos figures en png
 
- ###Analyse des données
+ ### Analyse des données
   - [ ] Etude des relations entre variables qualitatives
     - [ ] Faire des tableaux croisées et des tests d’indépendance du chi2 sur les tableaux entre les différentes variables
     - [ ] Représenter graphiquement ces tableaux (mosaicplot) et les analyser

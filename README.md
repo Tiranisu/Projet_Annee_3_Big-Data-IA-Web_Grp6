@@ -9,12 +9,12 @@ Approfondir les compétences acquises dans les modules Big Data, Intelligence Ar
   - [x] Construire un jeu de données avec le nombre d’accidents selon la gravité pour 100.000 habitants par région (qui servirait à l’Analyse en Composantes Principales (ACP) discutée dans la section 3 de l’analyse de données)
   
  ### Créer des histogrammes 
-  - [ ] Créer des représentations graphiques
-    - [ ] Nombre d’accidents en fonction des conditions atmosphériques
-    - [ ] Nombre d’accidents en fonction de la description de la surface
+  - [x] Créer des représentations graphiques
+    - [x] Nombre d’accidents en fonction des conditions atmosphériques
+    - [x] Nombre d’accidents en fonction de la description de la surface
     - [x] Nombre d’accidents selon la gravité
-    - [ ] Nombre d’accidents par tranches d’heure
-    - [ ] Nombre d’accidents par ville
+    - [x] Nombre d’accidents par tranches d’heure
+    - [x] Nombre d’accidents par ville
 
 
   - [x] Créer des histogrammes

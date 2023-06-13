@@ -5,21 +5,21 @@ Approfondir les compétences acquises dans les modules Big Data, Intelligence Ar
 
 # To do list :
 ### Créer des histogrammes
-  - [ ] Construire des séries chronologiques sur l’évolution du nombre d’accidents par mois et semaines sur l’ensemble de la période
-  - [ ] Construire un jeu de données avec le nombre d’accidents selon la gravité pour 100.000 habitants par région (qui servirait à l’Analyse en Composantes Principales (ACP) discutée dans la section 3 de l’analyse de données)
+  - [x] Construire des séries chronologiques sur l’évolution du nombre d’accidents par mois et semaines sur l’ensemble de la période
+  - [x] Construire un jeu de données avec le nombre d’accidents selon la gravité pour 100.000 habitants par région (qui servirait à l’Analyse en Composantes Principales (ACP) discutée dans la section 3 de l’analyse de données)
   
  ### Créer des histogrammes 
   - [ ] Créer des représentations graphiques
     - [ ] Nombre d’accidents en fonction des conditions atmosphériques
     - [ ] Nombre d’accidents en fonction de la description de la surface
-    - [ ] Nombre d’accidents selon la gravité
+    - [x] Nombre d’accidents selon la gravité
     - [ ] Nombre d’accidents par tranches d’heure
     - [ ] Nombre d’accidents par ville
 
 
-  - [ ] Créer des histogrammes
-    - [ ] Quantité d’accidents en fonction des tranches d’âges
-    - [ ] Moyenne mensuelle des accidents
+  - [x] Créer des histogrammes
+    - [x] Quantité d’accidents en fonction des tranches d’âges
+    - [x] Moyenne mensuelle des accidents
   - [ ] Proposer une représentation sous formes de carte de la quantité d’accidents enregistrés par région puis par départements
   - [ ] Même chose avec les taux d’accidents graves
   - [ ] Exporter et sauvegarder vos figures en png

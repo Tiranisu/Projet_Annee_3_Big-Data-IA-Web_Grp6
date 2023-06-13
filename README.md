@@ -5,8 +5,8 @@ Approfondir les compétences acquises dans les modules Big Data, Intelligence Ar
 
 # To do list :
 ### Créer des histogrammes
-  - [ ] Construire des séries chronologiques sur l’évolution du nombre d’accidents par mois et semaines sur l’ensemble de la période
-  - [ ] Construire un jeu de données avec le nombre d’accidents selon la gravité pour 100.000 habitants par région (qui servirait à l’Analyse en Composantes Principales (ACP) discutée dans la section 3 de l’analyse de données)
+  - [x] Construire des séries chronologiques sur l’évolution du nombre d’accidents par mois et semaines sur l’ensemble de la période
+  - [x] Construire un jeu de données avec le nombre d’accidents selon la gravité pour 100.000 habitants par région (qui servirait à l’Analyse en Composantes Principales (ACP) discutée dans la section 3 de l’analyse de données)
   
  ### Créer des histogrammes 
   - [ ] Créer des représentations graphiques

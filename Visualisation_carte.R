@@ -1,4 +1,13 @@
+install.packages("leaflet")
+install.packages("geojsonio")
+install.packages("htmltools")
+library(leaflet)
+library(dplyr)
+library(geojsonio)
+library(htmltools)
+
 #https://rstudio.github.io/leaflet/choropleths.html
+
 visualisation_carte_region <- function() {
     carte_r <- geojsonio::geojson_read("data/regions.geojson", what = "sp")
     carte_r = carte_r[c(-14),]

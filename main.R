@@ -2,13 +2,12 @@
 # Projet : Statistiques des accidents de la route
 # Auteurs : Dorian TARIN, Antonin SABIRON, Mael GRELLIER-NEAU, Téo RORTAIS
 # Date : 17/06/2023
-# Version : 1.0
 ############################################
 
 
 #------------------------------------------------------#
 #                                                      #
-#             Visualisations des données               #
+#         Librairies et fichiers nécessaires           #
 #                                                      #
 #------------------------------------------------------#
 
@@ -99,8 +98,6 @@ data$mois <- month(data$date)
 #Création d'une week mois dans le dataframe contenant le numéro de la semaine
 data$week <- week(data$date)
 
-# plot(data$week)
-# plot(data$mois)
 
 #Construire un jeu de données avec le nombre d’accidents selon la gravité pour 100.000 habitants par région re d'accident par gravité
 data_com_dep_reg <- read.csv('data/communes-departement-region.csv', sep=',')
@@ -133,6 +130,8 @@ accident_departement[nrow(accident_departement) + 1,] <- list("Ardèche",NaN)
 accident_departement[nrow(accident_departement) + 1,] <- list("Ardennes",NaN)
 accident_departement[nrow(accident_departement) + 1,] <- list("Ariège",NaN)
 
+
+
 #------------------------------------------------------#
 #                                                      #
 #             Visualisations des données               #
@@ -140,16 +139,26 @@ accident_departement[nrow(accident_departement) + 1,] <- list("Ariège",NaN)
 #------------------------------------------------------#
 source("Visualisation_representation_graphique.R")
 source("Visualisation_histogrammes.R")
-chemin = "C:/oui" #Pour preciser dans quel dossier on veut enrengistrer les graphs
+#Pour preciser dans quel dossier on veut enrengistrer les graphs
+chemin = "C:/oui" 
 
+#Affichage des représentations graphiques
 visualisation_Nb_Acc_Athmo(chemin, data)
 visualisation_Nb_Acc_Surface(chemin, data)
 visualisation_Nb_Acc_Gravite(chemin, data)
 visualisation_Nb_Acc_Heure(chemin, data)
 visualisation_Nb_Acc_Ville(chemin, data)
 
+#Affichage des histogrammes
 visualisation_Nb_Acc_Age(chemin, data)
 visualisation_Nb_Acc_Mois(chemin, data)
+
+#Affichage des cartes
+source("Visualisation_carte.R")
+visualisation_carte_region()
+visualisation_carte_departement()
+
+
 
 #------------------------------------------------------#
 #                                                      #
@@ -158,6 +167,7 @@ visualisation_Nb_Acc_Mois(chemin, data)
 #------------------------------------------------------#
 source("Analyse_relations_variables_qualitatives.R")
 
+#Tests d'indépendance de chi2 sur les variables qualitatives
 # chi2_description_intersection_descr_grav(data)
 # chi2_description_intersection_descr_type_col(data)
 # chi2_descr_etat_surf_descr_grav(data)
@@ -166,19 +176,7 @@ source("Analyse_relations_variables_qualitatives.R")
 # chi2_age_descr_grav(data)
 
 
-######################CARTE DE FRANCE######################
-install.packages("leaflet")
-install.packages("geojsonio")
-install.packages("htmltools")
-library(leaflet)
-library(dplyr)
-library(geojsonio)
-library(htmltools)
 
-source("Visualisation_carte.R")
-visualisation_carte_region()
-visualisation_carte_departement()
-
-
+#------------------------------------------------------#
 print("Program END")
-########################################################################################
+#------------------------------------------------------#

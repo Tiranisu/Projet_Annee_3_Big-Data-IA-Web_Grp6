@@ -20,9 +20,9 @@ Approfondir les compétences acquises dans les modules Big Data, Intelligence Ar
   - [x] Créer des histogrammes
     - [x] Quantité d’accidents en fonction des tranches d’âges
     - [x] Moyenne mensuelle des accidents
-  - [ ] Proposer une représentation sous formes de carte de la quantité d’accidents enregistrés par région puis par départements
-  - [ ] Même chose avec les taux d’accidents graves
-  - [ ] Exporter et sauvegarder vos figures en png
+  - [X] Proposer une représentation sous formes de carte de la quantité d’accidents enregistrés par région puis par départements
+  - [X] Même chose avec les taux d’accidents graves
+  - [X] Exporter et sauvegarder vos figures en png
 
  ### Analyse des données
   - [ ] Etude des relations entre variables qualitatives
@@ -35,9 +35,9 @@ Approfondir les compétences acquises dans les modules Big Data, Intelligence Ar
       - [ ] Calculer les intervalles de confiance à 95% pour ces estimateurs
       - [ ] Calculer les R2 et R2 ajusté pour les deux modèles. Qu’en déduire ?
       - [ ] Quelle est la qualité des prédictions basées sur ces modèles de régression (à la semaine et au mois)?
-  - [ ] Bonus: ACP-AFC-ACM sur le jeu de données avec le nombre d’accidents selon la gravité pour 100.000habitants par région
-    - [ ] Eboulis des valeurs propres pour déterminer le nombre de variables principales à utiliser
-    - [ ] A quelle part d’inertie, ça correspond
-    - [ ] Contributions des variables (gravité) et des individus (régions) sur les axes principaux
-    - [ ] Représentation des variables sur le cercle des corrélations
-    - [ ] Interprétation des axes dans le plan principal
+  - [X] Bonus: ACP-AFC-ACM sur le jeu de données avec le nombre d’accidents selon la gravité pour 100.000habitants par région
+    - [x] Eboulis des valeurs propres pour déterminer le nombre de variables principales à utiliser
+    - [X] A quelle part d’inertie, ça correspond
+    - [X] Contributions des variables (gravité) et des individus (régions) sur les axes principaux
+    - [X] Représentation des variables sur le cercle des corrélations
+    - [X] Interprétation des axes dans le plan principal

@@ -8,7 +8,7 @@ library(htmltools)
 
 #https://rstudio.github.io/leaflet/choropleths.html
 
-visualisation_carte_region <- function() {
+visualisation_carte_region <- function(accident_region) {
     carte_r <- geojsonio::geojson_read("data/regions.geojson", what = "sp")
     carte_r = carte_r[c(-14),]
     carte_r$accident<-0
@@ -48,7 +48,7 @@ visualisation_carte_region <- function() {
 }
 
 
-visualisation_carte_departement <- function() {
+visualisation_carte_departement <- function(accident_departement) {
     carte_d <- geojsonio::geojson_read("data/departements.geojson", what = "sp")
     carte_d$accident<-0
 

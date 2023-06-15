@@ -1,7 +1,8 @@
 analyse_regression_mois <- function(data) {
-    data_reg_mois <- data.frame(NombreAccidents = table(data$mois))
+    data_reg_mois <- data.frame(NombreAccidents = table(data$mois)) # récupération du nombre d'accident par mois
     data_reg_mois$NombreAccidents.Var1 = as.numeric(data_reg_mois$NombreAccidents.Var1)
-    model1 <- lm(data_reg_mois$NombreAccidents.Freq~data_reg_mois$NombreAccidents.Var1)
+    model1 <- lm(data_reg_mois$NombreAccidents.Freq~data_reg_mois$NombreAccidents.Var1) # régression linéaire
+    #on affiche les différents coefficients
     coef(model1)
     summary(model1)
     anova(model1)
@@ -13,10 +14,7 @@ analyse_regression_mois <- function(data) {
     # Calcul de l'erreur quadratique moyenne (EQM)
     print(mean((data_reg_mois$NombreAccidents.Freq - p$fit)^2))
 
-
-
-    #plot(data_hist_mois$NombreAccidents.Freq~data_hist_mois$NombreAccidents.Var1,pch=16)
-    #abline(model1,col="red",lwd=2)
+    #on afiche les différents valauers et la régression linéaire avec son intervalle de confiance
     ggplot(data_hist_mois, aes(y=NombreAccidents.Freq, x=NombreAccidents.Var1))+
     geom_point()+
     geom_smooth(colour="red", method="lm",fill="red") +
@@ -30,11 +28,12 @@ analyse_regression_mois <- function(data) {
 
 
 analyse_regression_semaine <- function(data) {
-    data_reg_week <- data.frame(NombreAccidents = table(data$week))
+    data_reg_week <- data.frame(NombreAccidents = table(data$week)) # récupération du nombre d'accident par semaine
     print(data_reg_week)
     data_reg_week$NombreAccidents.Var1 = as.numeric(data_reg_week$NombreAccidents.Var1)
 
-    model2 <- lm(data_reg_week$NombreAccidents.Freq~data_reg_week$NombreAccidents.Var1)
+    model2 <- lm(data_reg_week$NombreAccidents.Freq~data_reg_week$NombreAccidents.Var1) # régression linéaire
+    #on affiche les différents coefficients
     coef(model2)
     summary(model2)
     anova(model2)
@@ -46,8 +45,7 @@ analyse_regression_semaine <- function(data) {
     # Calcul de l'erreur quadratique moyenne (EQM)
     print(mean((data_reg_week$NombreAccidents.Freq - p1$fit)^2))
 
-    #plot(data_reg_week$NombreAccidents.Freq~data_reg_week$NombreAccidents.Var1,pch=16)
-    #abline(model2,col="red",lwd=2)
+    #on afiche les différents valauers et la régression linéaire avec son intervalle de confiance
     ggplot(data_reg_week, aes(y=NombreAccidents.Freq, x=NombreAccidents.Var1))+
     geom_point()+
     geom_smooth(colour="red", se=TRUE, method="lm", fill="red") +

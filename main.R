@@ -96,7 +96,6 @@ preparation_variables_multimodales(data)
 
 
 #On met les variables numeriques sous format numérique et date en date
-#ACHTUNG ! Peut etre fais buguer la suite du code si vous aviez considéré vos valeurs en string (elle ne le sont plus toute)
 data$date <- as.chron(data$date)
 data$Num_Acc <- as.numeric(data$Num_Acc)
 data$id_usa <- as.numeric(data$id_usa)

@@ -157,10 +157,10 @@ visualisation_Nb_Acc_Mois(chemin, data)
 
 #Affichage des cartes
 source("Visualisation_carte.R")
-# visualisation_carte_region(accident_region)
-# visualisation_carte_departement(accident_departement)
-# visualisation_carte_taux_acc_grave_region(data_total,accident_region)
-# visualisation_carte_taux_acc_grave_departement(data_total,accident_departement)
+visualisation_carte_region(accident_region)
+visualisation_carte_departement(accident_departement)
+visualisation_carte_taux_acc_grave_region(data_total,accident_region)
+visualisation_carte_taux_acc_grave_departement(data_total,accident_departement)
 
 
 
@@ -182,7 +182,8 @@ chi2_age_descr_grav(data)
 chi2_id_usa_age(data)
 chi2_descr_athmo_descr_grav(data)
 
-
+source("Analyse_bonus.R")
+#analyse_bonus()
 
 #------------------------------------------------------#
 write.csv(data_total, "export.csv", row.names=FALSE)

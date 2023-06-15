@@ -6,8 +6,8 @@ chi2_description_intersection_descr_grav <- function(data) {
     print(khi_test$p.value)
     
     png("img/chi2_description_intersection_descr_grav.png")
-    mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Relation entre la description des intersection 
-    et la gravité de l'accident :", las = 3)
+    mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Relation entre la description des intersections 
+    et la gravité des accidents :", las = 3)
     dev.off()
 }
 
@@ -20,7 +20,8 @@ chi2_description_intersection_descr_type_col <- function(data) {
     print(khi_test$p.value)
 
     png("img/chi2_description_intersection_descr_type_col.png")
-    mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Title")
+    mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Relation entre la description des intersections 
+    et la description du type de colision :", las = 3)
     dev.off()
 }
 
@@ -33,7 +34,8 @@ chi2_descr_etat_surf_descr_grav <- function(data) {
     print(khi_test$p.value)
     
     png("img/chi2_descr_etat_surf_descr_grav.png")
-    mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Title")
+    mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Relation entre la description de l'état de la surface 
+    et la gravité des accidents :", las = 3)
     dev.off()
 }
 
@@ -46,7 +48,8 @@ chi2_descr_lum_descr_grav <- function(data) {
     print(khi_test$p.value)
     
     png("img/chi2_descr_lum_descr_grav.png")
-    mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Title")
+    mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Relation entre les conditions d'éclairage 
+    et la gravité des accidents :", las = 3)
     dev.off()
 }
 
@@ -59,7 +62,8 @@ chi2_date_descr_grav <- function(data) {
     print(khi_test$p.value)
     
     # png("img/chi2_date_descr_grav.png")
-    # mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Title")
+    # mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Relation entre la date 
+    # et la gravité des accidents :", las = 3)
     # dev.off()
 }
 
@@ -72,7 +76,7 @@ chi2_age_descr_grav <- function(data) {
     print(khi_test$p.value)
 
     png("img/chi2_age_descr_grav.png")
-    mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Title", las = 3)
+    mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Relation entre l'age et la gravité des accidents :", las = 3)
     dev.off()
 }
 
@@ -85,7 +89,7 @@ chi2_id_usa_age <- function(data) {
     print(khi_test$p.value)
 
     # png("img/chi2_id_usa_age.png")
-    # mosaicplot(t, color = c("red", "orange", "green", "black"), main = "chi2_id_usa_age")
+    # mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Relation entre l'age et l'identifiant de l'usager :", las = 3)
     # dev.off()
 }
 
@@ -98,6 +102,7 @@ chi2_descr_athmo_descr_grav <- function(data) {
     print(khi_test$p.value)
 
     png("img/chi2_descr_athmo_descr_grav.png")
-    mosaicplot(t, color = c("red", "orange", "green", "black"), main = "chi2_descr_athmo_descr_grav")
+    mosaicplot(t, color = c("red", "orange", "green", "black"), main = "Relation entre les conditions atmosphériques 
+    et la gravité des accidents :", las = 3)
     dev.off()
 }

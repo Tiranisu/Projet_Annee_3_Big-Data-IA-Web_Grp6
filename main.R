@@ -45,26 +45,6 @@ data_reg <- read.csv('data/regions.csv', sep=';')
 
 #------------------------------------------------------#
 #                                                      #
-#                Analyse des données                   #
-#                                                      #
-#------------------------------------------------------#
-source("Analyse_relations_variables_qualitatives.R")
-source("Analyse_regressions_linéaires.R")
-
-#Tests d'indépendance de chi2 sur les variables qualitatives
-chi2_description_intersection_descr_grav(data)
-chi2_description_intersection_descr_type_col(data)
-chi2_descr_etat_surf_descr_grav(data)
-chi2_descr_lum_descr_grav(data)
-chi2_date_descr_grav(data)
-chi2_age_descr_grav(data)
-chi2_id_usa_age(data)
-chi2_descr_athmo_descr_grav(data)
-
-
-
-#------------------------------------------------------#
-#                                                      #
 #              Préparation des données                 #
 #                                                      #
 #------------------------------------------------------#
@@ -162,7 +142,7 @@ source("Visualisation_representation_graphique.R")
 source("Visualisation_histogrammes.R")
 
 #Pour preciser dans quel dossier on veut enrengistrer les graphs
-chemin <- "C:/oui"
+chemin <- "img/"
 
 #Affichage des représentations graphiques
 visualisation_Nb_Acc_Athmo(chemin, data)
@@ -184,7 +164,23 @@ source("Visualisation_carte.R")
 
 
 
+#------------------------------------------------------#
+#                                                      #
+#                Analyse des données                   #
+#                                                      #
+#------------------------------------------------------#
+source("Analyse_relations_variables_qualitatives.R")
+source("Analyse_regressions_linéaires.R")
 
+#Tests d'indépendance de chi2 sur les variables qualitatives
+chi2_description_intersection_descr_grav(data)
+chi2_description_intersection_descr_type_col(data)
+chi2_descr_etat_surf_descr_grav(data)
+chi2_descr_lum_descr_grav(data)
+chi2_date_descr_grav(data)
+chi2_age_descr_grav(data)
+chi2_id_usa_age(data)
+chi2_descr_athmo_descr_grav(data)
 
 
 

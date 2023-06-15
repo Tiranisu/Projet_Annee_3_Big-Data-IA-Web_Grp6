@@ -11,9 +11,21 @@
 #                                                      #
 #------------------------------------------------------#
 
+#install.packages("leaflet")
+#install.packages("geojsonio")
+#install.packages("htmltools")
+#install.packages("mapview")
+
 library(tidyverse)  #Pour le recode
 library(chron)      #Pour le format date
 library(dplyr)
+library(leaflet)
+library(geojsonio)
+library(htmltools)
+library(mapview)
+
+library(webshot)
+#webshot::install_phantomjs(force=TRUE)
 
 data <- read.csv('data/stat_acc_V3.csv', sep=';')
 villes <- read.csv('data/laposte_hexasmal.csv', sep=';')
@@ -28,6 +40,26 @@ data_com_dep_reg <- read.csv('data/communes-departement-region.csv', sep=',')
 #CSV pour obtenir le nombre d'habitants par région
 #https://www.insee.fr/fr/statistiques/4265429?sommaire=4265511
 data_reg <- read.csv('data/regions.csv', sep=';')
+
+
+
+#------------------------------------------------------#
+#                                                      #
+#                Analyse des données                   #
+#                                                      #
+#------------------------------------------------------#
+source("Analyse_relations_variables_qualitatives.R")
+source("Analyse_regressions_linéaires.R")
+
+#Tests d'indépendance de chi2 sur les variables qualitatives
+chi2_description_intersection_descr_grav(data)
+chi2_description_intersection_descr_type_col(data)
+chi2_descr_etat_surf_descr_grav(data)
+chi2_descr_lum_descr_grav(data)
+chi2_date_descr_grav(data)
+chi2_age_descr_grav(data)
+chi2_id_usa_age(data)
+chi2_descr_athmo_descr_grav(data)
 
 
 
@@ -74,7 +106,7 @@ data$descr_cat_veh <- as.numeric(data$descr_cat_veh)
 data$an_nais <- as.numeric(data$an_nais)
 data$age <- as.numeric(data$age)
 data$place <- as.numeric(data$place)
-data$descr_grav <- as.numeric(data$descr_grav)
+# data$descr_grav <- as.numeric(data$descr_grav)
 
 
 #Construction des séries chronologiques sur l'évolution du nombre d'accidents par mois et par semaine en ajoutant 
@@ -146,28 +178,18 @@ visualisation_Nb_Acc_Mois(chemin, data)
 
 #Affichage des cartes
 source("Visualisation_carte.R")
-visualisation_carte_region(accident_region)
-visualisation_carte_departement(accident_departement)
+# visualisation_carte_region(accident_region)
+# visualisation_carte_departement(accident_departement)
+# visualisation_carte_taux_acc_grave_region(data_total,accident_region)
+# visualisation_carte_taux_acc_grave_departement(data_total,accident_departement)
 
 
 
-#------------------------------------------------------#
-#                                                      #
-#                Analyse des données                   #
-#                                                      #
-#------------------------------------------------------#
-source("Analyse_relations_variables_qualitatives.R")
 
-#Tests d'indépendance de chi2 sur les variables qualitatives
-# chi2_description_intersection_descr_grav(data)
-# chi2_description_intersection_descr_type_col(data)
-# chi2_descr_etat_surf_descr_grav(data)
-# chi2_descr_lum_descr_grav(data)
-# chi2_date_descr_grav(data)
-# chi2_age_descr_grav(data)
 
 
 
 #------------------------------------------------------#
+write.csv(data_total, "export.csv", row.names=FALSE)
 print("Program END")
 #------------------------------------------------------#

@@ -30,8 +30,6 @@ preparation_variables_multimodales <- function(data) {
     "23" = "Quad léger <= 50 cm3 (Quadricycle à moteur non carrossé)") 
 }
 
-
-
 preparation_Ajout_Num_Mois_Semaines <- function(data) {
     #Création d'une colonne mois dans la dataframe
     data$mois <<- month(data$date)

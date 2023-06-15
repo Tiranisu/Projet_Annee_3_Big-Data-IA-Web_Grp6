@@ -27,8 +27,8 @@ visualisation_Nb_Acc_Surface <- function(chemin, data) {
       panel.grid.major.y = element_blank(),
       legend.position="none"
     ) +
-    xlab("Nombre d'accidents") +
-    ylab("Description de la surface") +
+    ylab("Nombre d'accidents") +
+    xlab("Description de la surface") +
     ggtitle("Nombre d’accidents en fonction de la description de la surface")
   ggsave(filename = paste(chemin, "/graph_nb_acc_surface.png"), plot = graph, width = 8, height = 5)
 }

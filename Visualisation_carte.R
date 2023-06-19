@@ -5,7 +5,7 @@ visualisation_carte_region <- function(accident_region) {
     carte_r = carte_r[c(-14),]
     carte_r$accident<-0
 
-    carte$accident<-accident_region$n[match(tolower(carte_r$nom),tolower(accident_region$nom_region))]
+    carte_r$accident<-accident_region$n[match(tolower(carte_r$nom),tolower(accident_region$nom_region))]
 
 
     pal_r <- colorBin(

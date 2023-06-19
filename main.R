@@ -85,6 +85,15 @@ data$descr_cat_veh <- as.numeric(data$descr_cat_veh)
 data$an_nais <- as.numeric(data$an_nais)
 data$age <- as.numeric(data$age)
 data$place <- as.numeric(data$place)
+data$descr_agglo <- as.numeric(data$descr_agglo)
+data$descr_athmo <- as.numeric(data$descr_athmo)
+data$descr_lum <- as.numeric(data$descr_lum)
+data$descr_etat_surf <- as.numeric(data$descr_etat_surf)
+data$description_intersection <- as.numeric(data$description_intersection)
+data$descr_dispo_secu <- as.numeric(data$descr_dispo_secu)
+data$descr_motif_traj <- as.numeric(data$descr_motif_traj)
+data$descr_type_col <- as.numeric(data$descr_type_col)
+
 # data$descr_grav <- as.numeric(data$descr_grav)
 
 
